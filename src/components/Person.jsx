@@ -1,24 +1,22 @@
-import React from 'react';
+import React,{useState,useEffect,useContext,useReducer} from 'react';
 // import { connect } from 'react-redux';
 // import { bindActionCreators } from 'redux';
 
 
-export default class Person extends React.Component {
-  state = {
-    mentalHealth: 100,
-    physicalHealth: 100,
-  }
+import React from 'react'
 
-  render() {
-    return (
-      <div>
-        <div>physical health: {this.state.physicalHealth}</div>
+export default function Person() {
+  const [mentalHealth, setMentalHealth] = useState(100);
+  const [physicalHealth, setPhysicalHealth] = useState(100);
+  return (
+    <div>
+              <div>physical health: {this.state.physicalHealth}</div>
         <div>mental health: {this.state.mentalHealth}</div>
 
         <button>Slip on banana peel</button>
         <button>Watch the news</button>
         <button>Win the Lottery</button>
-      </div>
-    );
-  }
+    </div>
+  )
 }
+
